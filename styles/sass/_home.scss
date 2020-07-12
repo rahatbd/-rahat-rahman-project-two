@@ -1,4 +1,4 @@
-header {
+.home {
     background-image: url(../assets/header-image.jpg);
     min-height: 80vh;
     background-size: cover;
@@ -23,15 +23,15 @@ header {
 
     // how to use flex
     .headerNav {
-        display: flex;
+        // display: flex;
 
         // flex: 2 1 500px;
         // border: 2px solid red;
 
-        li {
-            padding: 20px 0 0 50px;
-            // flex: 2 1 25%;
-        }
+        // li {
+        //     padding: 20px 0 0 50px;
+        //     // flex: 2 1 25%;
+        // }
 
         li:first-child a {
             color: $highlightColourDark;
