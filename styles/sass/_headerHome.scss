@@ -1,0 +1,232 @@
+header {
+    background-image: url(../assets/header-image.jpg);
+    min-height: 80vh;
+    background-size: cover;
+    // background-position: center;
+    position: relative;
+
+    .headerHome {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    h1 {
+        font-family: $secondaryFontFamily;
+        font-size: 6.9rem;
+        line-height: 6.3rem;
+        text-transform: uppercase;
+        margin-top: 120px;
+
+        // flex: 0 2 500px;
+        width: 40%;
+    }
+
+    // how to use flex
+    .headerNav {
+        display: flex;
+
+        // flex: 2 1 500px;
+        // border: 2px solid red;
+
+        li {
+            padding: 20px 0 0 50px;
+            // flex: 2 1 25%;
+        }
+
+        li:first-child a {
+            color: $highlightColourDark;
+        }
+    }
+
+    .headerImage {
+        position: absolute;
+        width: 50%;
+        right: 0;
+        bottom: -70px;
+    }
+}
+
+.firstSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 150px 0;
+
+    h3 {
+        // @include h3Style;
+        padding-bottom: 20px;
+    }
+
+    p {
+        width: 85%;
+        padding-bottom: 20px;
+    }
+
+    button {
+        background-color: $highlightColour;
+    }
+}
+
+.secondSection {
+    background-color: $backgroundColour;
+    display: flex;
+    flex-wrap: wrap;
+
+    img {
+        width: 100%;
+    }
+
+    div:first-child,
+    div:last-child {
+        width: 45%;
+        position: relative;
+    }
+
+    div:nth-child(2),
+    div:nth-child(3) {
+        width: calc(55% - 10%);
+    }
+
+    div:nth-child(2) {
+        margin-left: 10%;
+
+        p {
+            margin-right: 15%;
+        }
+    }
+
+    div:nth-child(3) {
+        text-align: right;
+        margin-right: 10%;
+        padding-top: 30px;
+
+        p {
+            margin-left: 15%;
+        }
+    }
+
+    h4 {
+        // @include h4Style;
+        padding-top: 50px;
+    }
+
+    p {
+        padding: 20px 0;
+    }
+
+    button {
+        background-color: $primaryColour;
+        color: $primaryTextColour;
+    }
+
+    div:first-child {
+        top: -30px;
+
+        img {
+            box-shadow: 30px 30px $highlightColour;
+        }
+    }
+
+    div:last-child {
+        bottom: -50px;
+
+        img {
+            box-shadow: -30px 30px $highlightColour;
+        }
+    }
+}
+
+.thirdSection {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 150px 0 50px;
+
+    div {
+        // border: 1px solid grey;
+        width: 50%;
+        padding: 0 35px 0 55px;
+        margin-bottom: 50px;
+
+        &:nth-child(1) h4::before {
+            content: '\f124';
+        }
+
+        &:nth-child(2) h4::before {
+            content: '\f0c0';
+        }
+
+        &:nth-child(3) h4::before {
+            content: '\f15b';
+            padding: 7px 14px;
+        }
+
+        &:nth-child(4) h4::before {
+            content: '\f095';
+        }
+    }
+
+    h4 {
+        position: relative;
+        padding-bottom: 20px;
+
+        &::before {
+            font-family: 'Font Awesome 5 Free';
+            font-size: 1rem;
+            position: absolute;
+            top: -5px;
+            left: -60px;
+            background-color: $highlightColour;
+            color: $primaryColour;
+            border-radius: 50%;
+            padding: 5px 10px;
+        }
+    }
+}
+
+.fourthSection {
+    display: flex;
+    padding: 100px 0;
+
+    div {
+        // border: 1px solid grey;
+        width: 50%;
+    }
+
+    div:first-child {
+        width: 35%;
+
+        img {
+            box-shadow: 30px 30px $highlightColour;
+        }
+    }
+
+    div:last-child {
+        width: 65%;
+
+        h3 {
+            text-align: left;
+        }
+
+        p {
+            padding: 20px 0;
+        }
+
+        button {
+            background-color: $highlightColour;
+        }
+    }
+}
+
+.lastSection {
+    background-color: $backgroundColour;
+    padding: 100px 0;
+
+    .gallery {
+        display: flex;
+        
+        div {
+            // border: 1px solid red;
+            width: calc(100% / 3);
+        }
+    }
+}
