@@ -1,16 +1,18 @@
 .blog {
-    background-image: url(../assets/blog-header.jpg);
-    min-height: 80vh;
-    background-size: cover;
-    background-position: center;
+    // background-image: url(../assets/blog-header.jpg);
+    // min-height: 80vh;
+    // background-size: cover;
+    // background-position: center;
 
-    ul {
-        justify-content: flex-end;
+    // ul {
+    //     justify-content: flex-end;
 
-        li:nth-child(3) a {
-            color: $highlightColour;
-        }
-    }
+    //     li:nth-child(3) a {
+    //         color: $highlightColour;
+    //     }
+    // }
+
+    @include headerStyle('../assets/blog-header.jpg', 3);
 }
 
 .content {
@@ -112,49 +114,65 @@
             }
         }
 
-        form {
-            // border: 1px solid yellow;
-            padding: 50px 0;
+        // form {
+        //     padding: 50px 0;
 
-            .inputs {
-                display: flex;
-                justify-content: space-between;
-                padding-bottom: 50px;
-            }
+        //     p {
+        //         padding-left: 20px;
+        //     }
 
-            p {
-                padding-left: 20px;
-            }
+        //     input {
+        //         padding: 0 150px 0 5px;
+        //     }
+        // }
 
-            input {
-                color: $primaryTextColour;
-                background: transparent;
-                border: none;
-                border-bottom: 2px solid $highlightColour;
-                padding: 0 150px 0 5px;
+        // form {
+        //     // border: 1px solid yellow;
+        //     padding: 50px 0;
 
-                // &:active {
-                //     box-shadow: none;
-                // }
-            }
+        //     .inputs {
+        //         display: flex;
+        //         justify-content: space-between;
+        //         padding-bottom: 50px;
 
-            // how to make placeholder text white?
-            // remove the red default border
-            textarea {
-                width: 100%;
-                background: transparent;
-                border: 2px solid $highlightColour;
-                resize: none;
-                color: $primaryTextColour;
-                padding: 30px;
-            }
+        //         // label {
+        //         //     padding-left: 30px;
+        //         // }
+        //     }
 
-            button {
-                background-color: $backgroundColour;
-                color: $primaryTextColour;
-                width: 100%;
-                margin: 50px 0;
-            }
-        }
+        //     p {
+        //         padding-left: 20px;
+        //     }
+
+        //     input {
+        //         color: $primaryTextColour;
+        //         background: transparent;
+        //         border: none;
+        //         border-bottom: 2px solid $highlightColour;
+        //         padding: 0 150px 0 5px;
+
+        //         // &:active {
+        //         //     box-shadow: none;
+        //         // }
+        //     }
+
+        //     // how to make placeholder text white?
+        //     // remove the red default border
+        //     textarea {
+        //         width: 100%;
+        //         background: transparent;
+        //         border: 2px solid $highlightColour;
+        //         resize: none;
+        //         color: $primaryTextColour;
+        //         padding: 30px;
+        //     }
+
+        //     button {
+        //         background-color: $backgroundColour;
+        //         color: $primaryTextColour;
+        //         width: 100%;
+        //         margin: 50px 0;
+        //     }
+        // }
     }
 }

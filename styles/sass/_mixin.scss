@@ -7,6 +7,21 @@ $backgroundColour: #0F614E;
 
 $highlightColourDark: darken($highlightColour, 50);
 
+@mixin headerStyle($location, $number) {
+    background-image: url($location);
+    min-height: 80vh;
+    background-size: cover;
+    background-position: center;
+
+    ul {
+        justify-content: flex-end;
+
+        li:nth-child(#{$number}) a {
+            color: $highlightColour;
+        }
+    }
+}
+
 // @mixin h3Style {
 //     font-family: $secondaryFontFamily;
 //     font-size: 2.1rem;

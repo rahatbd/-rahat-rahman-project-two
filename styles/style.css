@@ -297,7 +297,7 @@ nav li {
   padding: 20px 0 0 50px;
 }
 
-nav a {
+a {
   color: #FFF;
   text-transform: uppercase;
   text-decoration: none;
@@ -315,6 +315,44 @@ button {
   cursor: pointer;
 }
 
+form .inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 50px;
+}
+
+form p {
+  padding-left: 20px;
+}
+
+form input {
+  color: #FFF;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #86E0F9;
+  padding: 0 150px 0 5px;
+}
+
+form textarea {
+  width: 100%;
+  background: transparent;
+  border: 2px solid #86E0F9;
+  resize: none;
+  color: #FFF;
+  padding: 30px;
+}
+
+form button {
+  background-color: #0F614E;
+  color: #FFF;
+  width: 100%;
+  margin: 50px 0;
+}
+
 footer {
   background-color: #86E0F9;
   color: #0C1423;
@@ -324,6 +362,7 @@ footer {
 footer a {
   color: #0C1423;
   text-decoration: none;
+  text-transform: capitalize;
 }
 
 .home {
@@ -563,7 +602,7 @@ footer a {
 }
 
 .blog {
-  background-image: url(../assets/blog-header.jpg);
+  background-image: url("../assets/blog-header.jpg");
   min-height: 80vh;
   background-size: cover;
   background-position: center;
@@ -681,44 +720,54 @@ footer a {
   padding-bottom: 10px;
 }
 
-.content section form {
-  padding: 50px 0;
+.contact {
+  background-image: url("../assets/contact-header.jpg");
+  min-height: 80vh;
+  background-size: cover;
+  background-position: center;
 }
 
-.content section form .inputs {
+.contact ul {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.contact ul li:nth-child(4) a {
+  color: #86E0F9;
+}
+
+.container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-bottom: 50px;
 }
 
-.content section form p {
-  padding-left: 20px;
+.container .social {
+  width: 25%;
+  padding-top: 25px;
 }
 
-.content section form input {
-  color: #FFF;
-  background: transparent;
-  border: none;
-  border-bottom: 2px solid #86E0F9;
-  padding: 0 150px 0 5px;
+.container .social i {
+  padding: 0 10px 20px 0;
 }
 
-.content section form textarea {
-  width: 100%;
-  background: transparent;
-  border: 2px solid #86E0F9;
-  resize: none;
-  color: #FFF;
-  padding: 30px;
+.container .social .icons + p {
+  padding-bottom: 30px;
 }
 
-.content section form button {
+.container form {
   background-color: #0F614E;
-  color: #FFF;
-  width: 100%;
-  margin: 50px 0;
+  -webkit-box-shadow: -30px 30px #86E0F9;
+          box-shadow: -30px 30px #86E0F9;
+  width: calc(75% - 50px);
+  margin-left: 50px;
+  padding: 50px 75px 0;
+  position: relative;
+  top: -330px;
+  margin-bottom: -200px;
+}
+
+.container form button {
+  background-color: #0C1423;
 }

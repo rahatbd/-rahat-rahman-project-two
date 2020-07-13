@@ -1,0 +1,39 @@
+.contact {
+    @include headerStyle('../assets/contact-header.jpg', 4);
+}
+
+.container {
+    display: flex;
+
+    // margin-bottom: 100px;
+    
+    .social {
+        // border: 1px solid yellow;
+        width: 25%;
+        padding-top: 25px;
+
+        i {
+            padding: 0 10px 20px 0;
+        }
+
+        .icons + p {
+            padding-bottom: 30px;
+        }
+    }
+
+    form {
+        // border: 1px solid yellow;
+        background-color: $backgroundColour;
+        box-shadow: -30px 30px $highlightColour;
+        width: calc(75% - 50px);
+        margin-left: 50px;
+        padding: 50px 75px 0;
+        position: relative;
+        top: -330px;
+        margin-bottom: -200px;
+
+        button {
+            background-color: $primaryColour;
+        }
+    }
+}

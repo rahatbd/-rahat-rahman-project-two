@@ -71,11 +71,18 @@ nav {
         padding: 20px 0 0 50px;
     }
 
-    a {
-        color: $primaryTextColour;
-        text-transform: uppercase;
-        text-decoration: none;
-    }
+    // a {
+    //     color: $primaryTextColour;
+    //     text-transform: uppercase;
+    //     text-decoration: none;
+    // }
+}
+
+// check
+a {
+    color: $primaryTextColour;
+    text-transform: uppercase;
+    text-decoration: none;
 }
 
 button {
@@ -90,6 +97,54 @@ button {
     cursor: pointer;
 }
 
+form {
+    // border: 1px solid yellow;
+
+    // padding: 50px 0;
+
+    .inputs {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 50px;
+    }
+
+    p {
+        padding-left: 20px;
+    }
+
+    input {
+        color: $primaryTextColour;
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid $highlightColour;
+
+        padding: 0 150px 0 5px;
+
+        // &:active {
+        //     box-shadow: none;
+        // }
+    }
+
+    // how to make placeholder text white?
+    // remove the red default border
+    textarea {
+        width: 100%;
+        background: transparent;
+        border: 2px solid $highlightColour;
+        resize: none;
+        color: $primaryTextColour;
+        padding: 30px;
+    }
+
+    button {
+        background-color: $backgroundColour;
+
+        color: $primaryTextColour;
+        width: 100%;
+        margin: 50px 0;
+    }
+}
+
 footer {
     background-color: $highlightColour;
     color: $primaryColour;
@@ -98,5 +153,7 @@ footer {
     a {
         color: $primaryColour;
         text-decoration: none;
+
+        text-transform: capitalize;
     }
 }
