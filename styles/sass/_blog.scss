@@ -1,17 +1,4 @@
 .blog {
-    // background-image: url(../assets/blog-header.jpg);
-    // min-height: 80vh;
-    // background-size: cover;
-    // background-position: center;
-
-    // ul {
-    //     justify-content: flex-end;
-
-    //     li:nth-child(3) a {
-    //         color: $highlightColour;
-    //     }
-    // }
-
     @include headerStyle('../assets/blog-header.jpg', 3);
 }
 
@@ -25,23 +12,25 @@
         width: calc(35% - 2%);
 
         div:first-child {
-            // border: 1px solid brown;
-            // Q:how did the bottom cut-off?
+            border-right: 25px solid $backgroundColour;
+
+            // Q1: Is it bad practice to remove the footprint of a relatively positioned element using negative margins?
             img {
-                box-shadow: 15px 15px $backgroundColour;
+                position: relative;
+                top: -20px;
+                margin-bottom: -20px;
             }
         }
 
         div:last-child {
             background-color: $backgroundColour;
-            width: 100%;
-            margin-right: -15px;
-            padding-left: 40px;
-
+            padding-left: 20px;
+            margin-right: 0;
+            
             h4 {
                 padding: 20px 0;
             }
-
+            
             p {
                 width: 85%;
                 padding-bottom: 50px;
@@ -49,10 +38,10 @@
 
             li {
                 list-style-position: inside;
-            }
-            
-            li:last-child {
-                padding-bottom: 30px;
+
+                &:last-child {
+                    padding-bottom: 30px;
+                }
             }
         }
     }
@@ -63,6 +52,7 @@
         width: calc(65% - 4%);
         position: relative;
         top: -430px;
+        // Q1: Is it bad practice to remove the footprint of a relatively positioned element using negative margins?
         margin-bottom: -430px;
 
         .image img {
@@ -116,63 +106,6 @@
 
         // form {
         //     padding: 50px 0;
-
-        //     p {
-        //         padding-left: 20px;
-        //     }
-
-        //     input {
-        //         padding: 0 150px 0 5px;
-        //     }
-        // }
-
-        // form {
-        //     // border: 1px solid yellow;
-        //     padding: 50px 0;
-
-        //     .inputs {
-        //         display: flex;
-        //         justify-content: space-between;
-        //         padding-bottom: 50px;
-
-        //         // label {
-        //         //     padding-left: 30px;
-        //         // }
-        //     }
-
-        //     p {
-        //         padding-left: 20px;
-        //     }
-
-        //     input {
-        //         color: $primaryTextColour;
-        //         background: transparent;
-        //         border: none;
-        //         border-bottom: 2px solid $highlightColour;
-        //         padding: 0 150px 0 5px;
-
-        //         // &:active {
-        //         //     box-shadow: none;
-        //         // }
-        //     }
-
-        //     // how to make placeholder text white?
-        //     // remove the red default border
-        //     textarea {
-        //         width: 100%;
-        //         background: transparent;
-        //         border: 2px solid $highlightColour;
-        //         resize: none;
-        //         color: $primaryTextColour;
-        //         padding: 30px;
-        //     }
-
-        //     button {
-        //         background-color: $backgroundColour;
-        //         color: $primaryTextColour;
-        //         width: 100%;
-        //         margin: 50px 0;
-        //     }
         // }
     }
 }

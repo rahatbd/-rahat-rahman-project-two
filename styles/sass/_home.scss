@@ -7,6 +7,7 @@
 
     .headerHome {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
     }
 
@@ -53,7 +54,6 @@
     padding: 150px 0;
 
     h3 {
-        // @include h3Style;
         padding-bottom: 20px;
     }
 
@@ -106,7 +106,6 @@
     }
 
     h4 {
-        // @include h4Style;
         padding-top: 50px;
     }
 
@@ -185,12 +184,8 @@
 
 .fourthSection {
     display: flex;
+    flex-wrap: wrap;
     padding: 100px 0;
-
-    div {
-        // border: 1px solid grey;
-        width: 50%;
-    }
 
     div:first-child {
         width: 35%;
@@ -223,6 +218,7 @@
 
     .gallery {
         display: flex;
+        flex-wrap: wrap;
         
         div {
             // border: 1px solid red;

@@ -361,7 +361,6 @@ footer {
 
 footer a {
   color: #0C1423;
-  text-decoration: none;
   text-transform: capitalize;
 }
 
@@ -376,6 +375,8 @@ footer a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -554,11 +555,9 @@ footer a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 100px 0;
-}
-
-.fourthSection div {
-  width: 50%;
 }
 
 .fourthSection div:first-child {
@@ -595,6 +594,8 @@ footer a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .lastSection .gallery div {
@@ -630,16 +631,20 @@ footer a {
   width: calc(35% - 2%);
 }
 
+.content aside div:first-child {
+  border-right: 25px solid #0F614E;
+}
+
 .content aside div:first-child img {
-  -webkit-box-shadow: 15px 15px #0F614E;
-          box-shadow: 15px 15px #0F614E;
+  position: relative;
+  top: -20px;
+  margin-bottom: -20px;
 }
 
 .content aside div:last-child {
   background-color: #0F614E;
-  width: 100%;
-  margin-right: -15px;
-  padding-left: 40px;
+  padding-left: 20px;
+  margin-right: 0;
 }
 
 .content aside div:last-child h4 {
@@ -741,6 +746,8 @@ footer a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .container .social {
