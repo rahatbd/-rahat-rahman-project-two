@@ -269,6 +269,7 @@ h3 {
   letter-spacing: 0.05rem;
   text-align: center;
   text-transform: uppercase;
+  line-height: 2rem;
 }
 
 h4 {
@@ -301,6 +302,13 @@ a {
   color: #FFF;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.fa-bars {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  visibility: hidden;
 }
 
 button {
@@ -375,8 +383,6 @@ footer a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -561,7 +567,8 @@ footer a {
 }
 
 .fourthSection div:first-child {
-  width: 35%;
+  width: calc(35% - 3%);
+  margin-right: 3%;
 }
 
 .fourthSection div:first-child img {
@@ -570,7 +577,8 @@ footer a {
 }
 
 .fourthSection div:last-child {
-  width: 65%;
+  width: calc(65% - 3%);
+  margin-left: 3%;
 }
 
 .fourthSection div:last-child h3 {
@@ -598,8 +606,24 @@ footer a {
       flex-wrap: wrap;
 }
 
-.lastSection .gallery div {
-  width: calc(100% / 3);
+.lastSection .gallery div img {
+  width: 100%;
+  height: 100%;
+}
+
+.lastSection .gallery div:first-child {
+  margin-right: 1%;
+  width: calc((100% / 3) - 1%);
+}
+
+.lastSection .gallery div:nth-child(2) {
+  margin: 0 1%;
+  width: calc((100% / 3) - 2%);
+}
+
+.lastSection .gallery div:last-child {
+  margin-left: 1%;
+  width: calc((100% / 3) - 1%);
 }
 
 .blog {
@@ -693,7 +717,7 @@ footer a {
   padding: 80px 0 10px;
 }
 
-.content section .text article h3 + P {
+.content section .text article h3 + p {
   padding-bottom: 80px;
 }
 
@@ -711,7 +735,8 @@ footer a {
 
 .content section .comment .first div:first-child,
 .content section .comment .last div:first-child {
-  width: 15%;
+  width: calc(15% - 2%);
+  margin-right: 2%;
   padding-top: 5px;
 }
 
@@ -777,4 +802,188 @@ footer a {
 
 .container form button {
   background-color: #0C1423;
+}
+
+@media (max-width: 1330px) {
+  form input {
+    padding-right: 70px;
+  }
+}
+
+@media (max-width: 1260px) {
+  .secondSection {
+    padding-bottom: 50px;
+  }
+  .secondSection div:last-child {
+    bottom: -80px;
+  }
+  .container form .inputs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container form .inputs .name {
+    margin-bottom: 30px;
+  }
+  .container form .inputs input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1040px) {
+  .secondSection div:first-child,
+  .secondSection div:last-child {
+    width: 100%;
+    position: static;
+    margin: 0 auto;
+  }
+  .secondSection div:first-child img,
+  .secondSection div:last-child img {
+    height: 90%;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .secondSection div:nth-child(2),
+  .secondSection div:nth-child(3) {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+  .secondSection div:nth-child(2) h4,
+  .secondSection div:nth-child(3) h4 {
+    padding: 0;
+  }
+  .secondSection div:nth-child(2) p,
+  .secondSection div:nth-child(3) p {
+    margin: 0 10%;
+  }
+  .secondSection div:nth-child(2) {
+    padding-bottom: 50px;
+  }
+  .secondSection div:nth-child(3) {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .content aside {
+    display: none;
+  }
+  .content section {
+    width: 80%;
+    margin: 0 auto -400px;
+  }
+  .content form input {
+    padding-right: 100px;
+  }
+}
+
+@media (max-width: 900px) {
+  .content form .inputs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .content form .inputs .name {
+    margin-bottom: 30px;
+  }
+  .content form .inputs input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  nav {
+    display: none;
+  }
+  .fa-bars {
+    visibility: visible;
+    font-size: 2rem;
+  }
+  .thirdSection {
+    padding-top: 100px;
+  }
+  .thirdSection div {
+    width: 100%;
+    margin-left: 2%;
+  }
+  .fourthSection div:first-child {
+    display: none;
+  }
+  .fourthSection div:last-child {
+    width: 100%;
+  }
+  .fourthSection div:last-child h3 {
+    text-align: center;
+  }
+  .fourthSection div:last-child button {
+    display: block;
+    margin: 0 auto;
+  }
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .container form {
+    width: 90%;
+  }
+  .container .social {
+    width: 100%;
+    text-align: center;
+    padding: 0 0 80px;
+  }
+}
+
+@media (max-width: 570px) {
+  .home h1 {
+    font-size: 4.5rem;
+    text-align: center;
+    width: 100%;
+  }
+  .home .headerImage {
+    display: none;
+  }
+  .firstSection {
+    padding: 100px 0;
+  }
+  .firstSection p {
+    width: 90%;
+  }
+  .lastSection {
+    padding: 50px 0 0;
+  }
+  .lastSection .gallery div:first-child, .lastSection .gallery div:nth-child(2), .lastSection .gallery div:last-child {
+    margin: 0 0 50px;
+    width: 100%;
+  }
+  .content section {
+    position: static;
+    margin-bottom: 50px;
+  }
+  .content section .text h3 {
+    font-size: 1.9rem;
+  }
+  .content section .comment .first div:first-child,
+  .content section .comment .last div:first-child {
+    display: none;
+  }
+  .content section .comment .first div:last-child,
+  .content section .comment .last div:last-child {
+    width: 100%;
+  }
+  .content section .comment .first div:last-child p:first-child,
+  .content section .comment .last div:last-child p:first-child {
+    padding-bottom: 50px;
+  }
+  .container form {
+    width: 95%;
+    top: -250px;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    padding: 50px 50px 0;
+    margin: 0 auto -150px;
+  }
 }

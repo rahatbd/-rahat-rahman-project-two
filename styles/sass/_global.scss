@@ -42,6 +42,7 @@ h3 {
     letter-spacing: 0.05rem;
     text-align: center;
     text-transform: uppercase;
+    line-height: 2rem;
 }
 
 h4 {
@@ -66,17 +67,19 @@ nav {
         list-style-type: none;
         padding: 20px 0 0 50px;
     }
-
-    // a {
-    //     color: $primaryTextColour;
-    //     text-transform: uppercase;
-    // }
 }
 
 a {
     color: $primaryTextColour;
     text-transform: uppercase;
     text-decoration: none;
+}
+
+.fa-bars {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    visibility: hidden;
 }
 
 button {
@@ -93,7 +96,6 @@ button {
 
 form {
     // border: 1px solid yellow;
-    // padding: 50px 0;
 
     .inputs {
         display: flex;
@@ -105,21 +107,16 @@ form {
         padding-left: 20px;
     }
 
+    // Q1: There seems to be a red border when the inputs and textarea is active. Is this browser default styling? How can I remove it?
     input {
         color: $primaryTextColour;
         background: transparent;
         border: none;
         border-bottom: 2px solid $highlightColour;
-
         padding: 0 150px 0 5px;
-
-        // &:active {
-        //     box-shadow: none;
-        // }
     }
 
-    // how to make placeholder text white?
-    // remove the red default border
+    // Q2: How can I make the placeholder text white as shown in PSD?
     textarea {
         width: 100%;
         background: transparent;
@@ -131,7 +128,6 @@ form {
 
     button {
         background-color: $backgroundColour;
-
         color: $primaryTextColour;
         width: 100%;
         margin: 50px 0;

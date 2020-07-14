@@ -29,6 +29,7 @@
         padding: 50px 75px 0;
         position: relative;
         top: -330px;
+        // Q4: Is it alright to remove the footprint of a relatively positioned element using negative margins or it is considered bad practice?
         margin-bottom: -200px;
 
         button {

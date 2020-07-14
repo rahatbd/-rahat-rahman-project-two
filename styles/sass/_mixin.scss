@@ -21,3 +21,19 @@ $highlightColourDark: darken($highlightColour, 50);
         }
     }
 }
+
+@mixin inputWidth {
+    form {
+        .inputs {
+            flex-direction: column;
+
+            .name {
+                margin-bottom: 30px;
+            }
+
+            input {
+                width: 100%;
+            }
+        }
+    }
+}

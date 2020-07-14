@@ -1,0 +1,224 @@
+@media (max-width: 1330px) {
+    form {
+        input {
+            padding-right: 70px;
+        }
+    }
+}
+
+@media (max-width: 1260px) {
+    //****** HOME STYLES ******//
+    .secondSection {
+        padding-bottom: 50px;
+
+        div:last-child {
+            bottom: -80px;
+        }
+    }
+
+    //****** CONTACT STYLES ******//
+    .container {
+        @include inputWidth();
+    }
+}
+
+@media (max-width: 1040px) {
+    //****** HOME STYLES ******//
+    .secondSection {
+        div:first-child,
+        div:last-child {
+            // border: 1px solid yellow;
+            width: 100%;
+            position: static;
+            margin: 0 auto;
+
+            img {
+                height: 90%;
+                box-shadow: none;
+            }
+        }
+
+        div:nth-child(2),
+        div:nth-child(3) {
+            width: 100%;
+            text-align: center;
+            margin: 0;
+
+            h4 {
+                padding: 0;
+            }
+
+            p {
+                margin: 0 10%;
+            }
+        }
+
+        div:nth-child(2) {
+            padding-bottom: 50px;
+        }
+
+        div:nth-child(3) {
+            order: 1;
+        }
+    }
+
+    //****** BLOG STYLES ******//
+    .content {
+        aside {
+            display: none;
+        }
+        section {
+            width: 80%;
+            // Q4: Is it alright to remove the footprint of a relatively positioned element using negative margins or it is considered bad practice?
+            margin: 0 auto -400px;
+        }
+        form {
+            input {
+                padding-right: 100px;
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    //****** BLOG STYLES ******//
+    .content {
+        @include inputWidth();
+    }
+
+}
+
+@media (max-width: 800px) {
+    nav {
+        display: none;
+    }
+
+    .fa-bars {
+        visibility: visible;
+        font-size: 2rem;
+    }
+
+    //****** HOME STYLES ******//
+    .thirdSection {
+        padding-top: 100px;
+
+        div {
+            width: 100%;
+            margin-left: 2%;
+        }
+    }
+
+    .fourthSection {
+        div:first-child {
+            display: none;
+        }
+
+        div:last-child {
+            width: 100%;
+
+            h3 {
+                text-align: center;
+            }
+
+            button {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    //****** CONTACT STYLES ******//
+    .container {
+        flex-direction: column-reverse;
+
+        form {
+            width: 90%;
+        }
+
+        .social {
+            width: 100%;
+            text-align: center;
+            padding: 0 0 80px;
+        }
+    }
+}
+
+@media (max-width: 570px) {
+    //****** HOME STYLES ******//
+    .home {
+        // Q5: For some reason, applying styles directly to h1 do not work even though there is only one h1 throughout the code. I am wondering why that is?
+        h1 {
+            font-size: 4.5rem;
+            text-align: center;
+            width: 100%;
+        }
+
+        .headerImage {
+            display: none;
+        }
+    }
+
+    .firstSection {
+        padding: 100px 0;
+
+        p {
+            width: 90%;
+        }
+    }
+
+    .lastSection {
+        padding: 50px 0 0;
+
+        .gallery div {
+            &:first-child,
+            &:nth-child(2),
+            &:last-child {
+            margin: 0 0 50px;
+            width: 100%;
+            }
+        }
+    }
+
+    //****** BLOG STYLES ******//
+    .content {
+        section {
+            position: static;
+            margin-bottom: 50px;
+
+            .text {
+                h3 {
+                    font-size: 1.9rem;
+                }
+            }
+
+            .comment {
+                .first, 
+                .last {
+                    div:first-child {
+                        display: none;
+                    }
+
+                    div:last-child {
+                        width: 100%;
+
+                        p:first-child {
+                            padding-bottom: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //****** CONTACT STYLES ******//
+    .container {
+        form {
+            width: 95%;
+            top: -250px;
+            box-shadow: none;
+            padding: 50px 50px 0;
+            // Q4: Is it alright to remove the footprint of a relatively positioned element using negative margins or it is considered bad practice?
+            margin: 0 auto -150px;
+        }
+    }
+}
