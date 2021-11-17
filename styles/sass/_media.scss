@@ -27,7 +27,6 @@
     .secondSection {
         div:first-child,
         div:last-child {
-            // border: 1px solid yellow;
             width: 100%;
             position: static;
             margin: 0 auto;
@@ -67,16 +66,22 @@
         aside {
             display: none;
         }
+
         section {
             width: 80%;
-            // Q4: Is it alright to remove the footprint of a relatively positioned element using negative margins or it is considered bad practice?
-            margin: 0 auto -400px;
+            margin: 0 auto;
         }
+
         form {
             input {
                 padding-right: 100px;
             }
         }
+    }
+
+    //****** CONTACT STYLES ******//
+    .container {
+        padding-top: 50px;
     }
 }
 
@@ -85,20 +90,38 @@
     .content {
         @include inputWidth();
     }
-
 }
 
 @media (max-width: 800px) {
     nav {
-        display: none;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+
+        li:first-child {
+            padding-left: 0;
+        }
+
+        li:not(:first-child) {
+            padding-left: 25px;
+        }
     }
 
-    .fa-bars {
-        visibility: visible;
-        font-size: 2rem;
+    h2 {
+        padding-bottom: 100px;
     }
 
     //****** HOME STYLES ******//
+    .home {
+        .headerNav {
+            li:first-child {
+                a {
+                    color: $highlightColour;
+                }
+            }
+        }
+    }
+
     .thirdSection {
         padding-top: 100px;
 
@@ -114,10 +137,19 @@
         }
 
         div:last-child {
-            width: 100%;
+            width: 90%;
+            margin: 0 auto;
 
             h3 {
                 text-align: center;
+            }
+
+            div {
+                display: block;
+
+                img {
+                    margin: 20px auto 30px;
+                }
             }
 
             button {
@@ -138,7 +170,7 @@
         .social {
             width: 100%;
             text-align: center;
-            padding: 0 0 80px;
+            padding: 0 0 50px;
         }
     }
 }
@@ -146,7 +178,6 @@
 @media (max-width: 570px) {
     //****** HOME STYLES ******//
     .home {
-        // Q5: For some reason, applying styles directly to h1 do not work even though there is only one h1 throughout the code. I am wondering why that is?
         h1 {
             font-size: 4.5rem;
             text-align: center;
@@ -166,6 +197,19 @@
         }
     }
 
+    .fourthSection {
+        div:last-child {
+            div {
+                margin-right: 15px;
+
+                img {
+                    box-shadow: 15px 15px $highlightColour;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+
     .lastSection {
         padding: 50px 0 0;
 
@@ -173,8 +217,8 @@
             &:first-child,
             &:nth-child(2),
             &:last-child {
-            margin: 0 0 50px;
-            width: 100%;
+                margin: 0 0 50px;
+                width: 100%;
             }
         }
     }
@@ -182,9 +226,6 @@
     //****** BLOG STYLES ******//
     .content {
         section {
-            position: static;
-            margin-bottom: 50px;
-
             .text {
                 h3 {
                     font-size: 1.9rem;
@@ -214,11 +255,9 @@
     .container {
         form {
             width: 95%;
-            top: -250px;
             box-shadow: none;
-            padding: 50px 50px 0;
-            // Q4: Is it alright to remove the footprint of a relatively positioned element using negative margins or it is considered bad practice?
-            margin: 0 auto -150px;
+            margin: 0 auto 50px;
+            padding: 50px 25px 0;
         }
     }
 }

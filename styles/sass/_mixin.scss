@@ -1,15 +1,14 @@
-$primaryColour: #0C1423;
-$primaryTextColour: #FFF;
 $primaryFontFamily: 'Lato', sans-serif;
 $secondaryFontFamily: 'Barlow', sans-serif;
+$primaryColour: #0C1423;
+$primaryTextColour: #FFF;
 $highlightColour: #86E0F9;
 $backgroundColour: #0F614E;
 
-$highlightColourDark: darken($highlightColour, 50);
+$highlightColourDark: darken($highlightColour, 100);
 
 @mixin headerStyle($location, $number) {
     background-image: url($location);
-    min-height: 80vh;
     background-size: cover;
     background-position: center;
 
