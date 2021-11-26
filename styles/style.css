@@ -644,6 +644,12 @@ footer a {
     padding-bottom: 10px;
 }
 
+.bodyContact {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
 .contact {
     background-image: url("../assets/contact-header.jpg");
     background-size: cover;
